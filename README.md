@@ -9,7 +9,7 @@
 >  Record: General requirements and specifications via Skype.</br>
 >  Here we list some key ideas that we will be focusing on in the beginning of design: </br>
 >  * Keyboard Design
->  * Font 
+>  * Font , importing our own font ( open sans etc ).
 >  * User's inputs are obtained window by window, user can track the whole input process. 
 
 </br>
