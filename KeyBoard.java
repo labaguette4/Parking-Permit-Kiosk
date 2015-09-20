@@ -13,6 +13,7 @@ import java.util.LinkedList;
 
 public class KeyBoard extends JFrame {
 
+    String input;
     private JFrame frame = new JFrame("KeyBoard");
     private JPanel parent = new JPanel(new GridLayout(0, 1));
     private JPanel[] panel;
@@ -50,6 +51,9 @@ public class KeyBoard extends JFrame {
         pack();
         setVisible(true);
     }
+    
+    public String getIn()
+    {return input;}
 
     public class MyActionListener implements ActionListener {
 
@@ -62,6 +66,7 @@ public class KeyBoard extends JFrame {
             String info = (String) btn.getClientProperty("key");
             myinfo.add(info);
             System.out.println(myinfo);
+            input += btn.getClientProperty("key");
         }
     }
 
@@ -70,6 +75,7 @@ public class KeyBoard extends JFrame {
             @Override
             public void run() {
                 KeyBoard guI = new KeyBoard();
+                System.out.println(guI.getIn());
             }
         });
     }
