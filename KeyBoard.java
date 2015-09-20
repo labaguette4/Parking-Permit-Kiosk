@@ -8,6 +8,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import java.util.LinkedList;
+
 
 public class KeyBoard extends JFrame {
 
@@ -15,6 +17,7 @@ public class KeyBoard extends JFrame {
     private JPanel parent = new JPanel(new GridLayout(0, 1));
     private JPanel[] panel;
     private JButton[][] button;
+    LinkedList<String> myinfo = new LinkedList<String>(); 
     private static final String[][] key = {
         {"A", "B", "C", "D", "E","F","G","H","I"},
         {"J", "K", "L", "N", "M","O","P","Q","R"}, 
@@ -56,6 +59,9 @@ public class KeyBoard extends JFrame {
             System.out.println("clicked column --> " + btn.getClientProperty("column")
                     + ", row --> " + btn.getClientProperty("row")
                     + ", Key Typed --> " + btn.getClientProperty("key"));
+            String info = (String) btn.getClientProperty("key");
+            myinfo.add(info);
+            System.out.println(myinfo);
         }
     }
 
